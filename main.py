@@ -50,12 +50,12 @@ def open_file():
     file_path = os.path.abspath("data.txt")
     os.startfile(file_path)
 
-
+#Create a TKinter window
 window = Tk()
 window.title("Password Manager")
 window.config(padx=50, pady=50)
 
-
+#Defining windows parameters
 canvas = Canvas(height=200, width=200)
 logo_img = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=logo_img)
@@ -78,7 +78,6 @@ email_entry.grid(row=2, column=1, columnspan=2)
 email_entry.insert(0, "philips@logi4k.com")
 password_entry = Entry(width=35)
 password_entry.grid(row=3, column=1, columnspan=2)
-
 
 #Buttons
 generate_password_button = Button(text="Generate Password", command=generate_password)
