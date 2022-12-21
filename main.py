@@ -3,6 +3,7 @@ from tkinter import messagebox
 from random import choice, randint, shuffle
 import string
 import os
+import json
 
 
 #Password Generator
@@ -30,24 +31,37 @@ def save():
     website = website_entry.get()
     email = email_entry.get()
     password = password_entry.get()
+    new_data = {website:
+        {"email": email,
+        "password": password, }
+        }
     
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="You forgot something...", message="Fill in the empty fields.")
-    else:   
-        is_ok = messagebox.askokcancel(title=website,
-                            message=f"These are the details you entered: \nEmail: {email}\nPassword: {password}"
-                            f"\nIs it okay to save")
-        if is_ok:
-            with open("data.txt", "a") as data_file:
-                data_file.write(f"{website} | {email} | {password}\n")
-                website_entry.delete(0, END)
-                password_entry.delete(0, END)
-                messagebox.showinfo(title="Generated", message="Password has been generated")
-                
+    else:
+        #This try code block will see if there is a data.json file the program can write the details
+        try:   
+            with open("data.json", "r") as data_file:
+                data = json.load(data_file)
+        #This except code will catch the FileNotFound exception if there is no data.json file, once its caught, a new data file will be created and the new data generated will be saved in data.json
+        except FileNotFoundError:
+            with open("data.json", "w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+        #This else statement only triggers if the else statement is executed. This code block will update the new data generated and add it to the old generated data
+        else:
+            data.update(new_data)
+            with open("data.json", "w") as data_file:
+                json.dump(data, data_file, indent=4)
+        #This code block will run no matter if all the other statements are executed or not, and it deletes the information entered in the website and password entry fields
+        finally:                
+            website_entry.delete(0, END)
+            password_entry.delete(0, END)
+            messagebox.showinfo(title="Generated", message="Password has been generated")
 
+                
 #Open the saved data file
 def open_file():
-    file_path = os.path.abspath("data.txt")
+    file_path = os.path.abspath("data.json")
     os.startfile(file_path)
 
 #Create a TKinter window
