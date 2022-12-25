@@ -4,7 +4,7 @@ from random import choice, randint, shuffle
 import string
 import os
 import json
-
+import pyperclip
 
 # Password Generator
 def generate_password():
@@ -66,8 +66,9 @@ def save():
         finally:
             website_entry.delete(0, END)
             password_entry.delete(0, END)
+            pyperclip.copy(password)
             messagebox.showinfo(
-                title="Generated", message="Password has been generated"
+                title="Generated", message=f"Password has been generated for {website} and copied to clipboard"
             )
 
 
@@ -75,6 +76,7 @@ def save():
 def find_password():
     # Website variable that saves the website and capitalize the first letter
     website = website_entry.get().capitalize()
+    password = password_entry.get()
 
     # Try statement to open the saved data file
     try:
@@ -92,8 +94,9 @@ def find_password():
         if website in data:
             email = data[website]["email"]
             password = data[website]["password"]
+            pyperclip.copy(password)
             messagebox.showinfo(
-                title=website, message=f"Email : {email}\nPassword : {password}"
+                title=website, message=f"Email : {email}\nPassword : {password}\nPassword copied to clipboard"
             )
 
     # Shows a message box if the website the user searched for is not found
