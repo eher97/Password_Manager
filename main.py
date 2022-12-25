@@ -75,29 +75,43 @@ logo_img = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=logo_img)
 canvas.grid(row=0, column=1)
 
-#Labels
+#Website Label
 website_label = Label(text="Website:")
 website_label.grid(row=1, column=0)
+
+#Email Label
 email_label = Label(text="Email/Username:")
 email_label.grid(row=2, column=0)
+
+#Password Label
 password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
 
-#Text entry fields
+#Website entry field
 website_entry = Entry(width=35)
 website_entry.grid(row=1, column=1, columnspan=2)
 website_entry.focus()
+
+#Email entry field 
 email_entry = Entry(width=35)
 email_entry.grid(row=2, column=1, columnspan=2)
 email_entry.insert(0, "philips@logi4k.com")
+
+#Password entry field
 password_entry = Entry(width=35)
 password_entry.grid(row=3, column=1, columnspan=2)
 
-#Buttons
+#Generate Password Button
 generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(row=3,column=2)
+
+#Add Password Button
 add_button = Button(text="Add", width=36, command=save)
 add_button.grid(row=4,column=1, columnspan=2)
+
+#Search Button
+search_button = Button(text="Search", width=15)
+search_button.grid(row=1,column=3)
 
 #Open file button
 data_file_button = Button(text="Open saved details", command=open_file)
