@@ -5,4 +5,4 @@
 
 <img src="https://i.postimg.cc/ncfQd3kz/e-Vnuxie-1.gif">
 
-![Guide 1](https://i.postimg.cc/ncfQd3kz/e-Vnuxie-1.gif)
+![Guide 1](https://i.imgur.com/ryOXUnd.mp4)
