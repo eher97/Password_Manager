@@ -5,7 +5,7 @@
 
 <img src="https://cdn-useast1.kapwing.com/final_63d84774963acc0139dad939_785482.gif">
 
-<img src="https://gifyu.com/image/Smigq">
+<img src="https://s3.gifyu.com/images/Laggin-EP2.gif">
 
 
 
