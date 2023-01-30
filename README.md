@@ -5,4 +5,4 @@
 
 <img src="https://i.postimg.cc/ncfQd3kz/e-Vnuxie-1.gif">
 
-![Guide 1](https://images-ext-1.discordapp.net/external/JT0c8501gMnwaJM4C7lbEQHdMKFUwojOywrsa2v2PmM/https/i.imgur.com/ryOXUnd.mp4)
+![Guide 1](https://cdn-useast1.kapwing.com/final_63d84774963acc0139dad939_785482.gif)
