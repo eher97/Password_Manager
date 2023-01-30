@@ -3,4 +3,4 @@
 #### Data are saved in .json files
 #### Functionality include being able to search for password, auto generate password
 
-<img src= "![image](https://user-images.githubusercontent.com/83563240/215606183-76245ff0-8a4c-4192-be5f-34e6b33780eb.png)" width="300">
+<img src= "https://i.imgur.com/ryOXUnd.mp4" width="300">
