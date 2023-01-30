@@ -3,6 +3,6 @@
 #### Data are saved in .json files
 #### Functionality include being able to search for password, auto generate password
 
-<img src="https://i.postimg.cc/ncfQd3kz/e-Vnuxie-1.gif">
+<img src="https://cdn-useast1.kapwing.com/final_63d84774963acc0139dad939_785482.gif">
 
-![Guide 1](https://cdn-useast1.kapwing.com/final_63d84774963acc0139dad939_785482.gif)
+
