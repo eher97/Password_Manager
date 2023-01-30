@@ -3,4 +3,4 @@
 #### Data are saved in .json files
 #### Functionality include being able to search for password, auto generate password
 
-<img src="https://i.postimg.cc/BZXgW7HB/eVnuxie.gif">
+<img src="https://i.postimg.cc/ncfQd3kz/e-Vnuxie-1.gif">
